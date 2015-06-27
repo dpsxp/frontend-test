@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="stylesheets/style.css" media="all">
   </head>
   <body>
-      <!-- let's code :D -->
+    <div id="app">
+    </div>
 
-    <script src="javascripts/main.js"></script> 
+
+    <script type="underscore-template" id="person-template">
+      <div class="thumb">
+        <img src="<%= picture %>" alt="<%= name %>">
+      </div>
+      <div class="info">
+        <p><%= name %></p>
+        <p><%= description %></p>
+      </div>
+    </script>
+
+    <script src="javascripts/bundle.js"></script>
 </html>

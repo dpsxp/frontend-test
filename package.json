@@ -2,10 +2,21 @@
   "name": "R7FrontendTest",
   "version": "0.0.1",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "compile": "browserify public/javascripts/main.js -t babelify --outfile public/javascripts/bundle.js",
+    "postinstall": "npm run compile"
   },
+
   "dependencies": {
     "connect": "~3.1.1",
-    "serve-static": "~1.5.3"
+    "serve-static": "~1.5.3",
+    "backbone": "^1.2.1",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  },
+
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4"
   }
 }
