@@ -10,10 +10,10 @@ class Person extends Model {
 
   initialize() {
     this.setLikes();
-    this.setNegatives();
+    this.setDislikes();
   }
 
-  setNegatives () {
+  setDislikes () {
     this.set('dislikes', this._getPercentage('negative'));
   }
 
@@ -22,13 +22,13 @@ class Person extends Model {
   }
 
   _getTotal() {
-    return window.parseInt(this.get('positive')) + window.parseInt(this.get('negative'));
+    return parseInt(this.get('positive')) + parseInt(this.get('negative'));
   }
 
   _getPercentage (prop) {
     var total, calc, result;
     total = this._getTotal();
-    calc = window.parseInt(this.get(prop));
+    calc = parseInt(this.get(prop));
 
     if (calc > 0) {
       result =  (calc * 100) / total;

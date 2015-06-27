@@ -4,9 +4,9 @@
   "scripts": {
     "start": "node app.js",
     "compile": "browserify public/javascripts/main.js -t babelify --outfile public/javascripts/bundle.js",
-    "postinstall": "npm run compile"
+    "postinstall": "npm run compile",
+    "test": "mocha --compilers js:babel/register --recursive ./tests"
   },
-
   "dependencies": {
     "connect": "~3.1.1",
     "serve-static": "~1.5.3",
@@ -14,9 +14,11 @@
     "jquery": "^2.1.4",
     "underscore": "^1.8.3"
   },
-
   "devDependencies": {
+    "babel": "^5.6.14",
     "babelify": "^6.1.2",
-    "browserify": "^10.2.4"
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
   }
 }
