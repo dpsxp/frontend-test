@@ -7,8 +7,8 @@ class PeopleCollecion  extends Collection {
     this.url = '/fazenda.json';
   }
 
-  comparator (b, a) {
-    return a.get('likes') > b.get('likes') ? 1 : -1;
+  comparator (a, b) {
+    return a.get('likes') > b.get('likes') ? -1 : 1;
   }
 
   parse (response) {
