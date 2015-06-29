@@ -20,10 +20,10 @@ describe('PersonView', function () {
 
     it('throws a error if no model is given', function() {
       var createView = function () {
-        view = new PersonView();
+        view = new PersonView({});
       };
 
-      expect(createView).to.throw(Error);
+      expect(createView).to.throw(/Missing Model for Person View/);
     });
   });
 
