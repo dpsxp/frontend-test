@@ -4,7 +4,7 @@ var View = Backbone.View;
 var _ = require('underscore');
 
 class PersonView extends View {
-  constructor(options) {
+  constructor(options = {}) {
     if (!options.model) {
       throw new Error('Missing Model for Person View');
     }
