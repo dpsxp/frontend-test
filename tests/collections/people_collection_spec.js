@@ -36,10 +36,16 @@ describe('PeopleCollection', function () {
       var models = [];
       var fakeModel = { get: likeFunction(32) };
       var otherModel = { get: likeFunction(75) };
+      var lastModel = { get: likeFunction(16) };
+
       models.push(fakeModel);
       models.push(otherModel);
+      models.push(lastModel);
       models.sort(collection.comparator);
+
       expect(models[0]).to.be.eql(otherModel);
+      expect(models[1]).to.be.eql(fakeModel);
+      expect(models[2]).to.be.eql(lastModel);
     });
   });
 
