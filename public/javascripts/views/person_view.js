@@ -16,6 +16,8 @@ class PersonView extends View {
     if (!options.template) {
       let text = Backbone.$('#person-template').text();
       this.template = _.template(text);
+    } else {
+      this.template = options.template;
     }
   }
 
